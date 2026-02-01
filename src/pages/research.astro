@@ -206,68 +206,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 									</div>
 								</div>
 							</div>
-
-							<div class="funding-section">
-								<h3>Potential Funding Sources</h3>
-								<p>Research aligns with priorities of multiple agencies and industry partners including Department of Science & Technology (DST), Department of Defense (DOD), Technology Development Board (TDB), National Centre for Additive Manufacturing (NCAM), Central Manufacturing Technology Institute (CMTI), and industry partners such as Simpliforge and TATA Motors.</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Mentoring Tab -->
-					<div class="tab-content" id="mentoring">
-						<div class="mentoring-content">
-							<div class="mentoring-intro">
-								<p>Guided independence, structured training, and direct integration into meaningful research experiences form the core of my mentoring approach.</p>
-							</div>
-
-							<div class="mentoring-phases">
-								<div class="phase-card">
-									<div class="phase-number">1</div>
-									<h3>Onboarding & Foundation</h3>
-									<p>Understanding each student's background and offering targeted training through foundational readings, hands-on computational tools instruction, or supervised experimental work on projects such as residual stress modeling in polymers or multiscale fatigue analysis.</p>
-								</div>
-
-								<div class="phase-card">
-									<div class="phase-number">2</div>
-									<h3>Building Confidence</h3>
-									<p>As students become more confident, gradually transitioning them toward ownership by encouraging experiment design, model development, data interpretation, and presentation of findings during group meetings.</p>
-								</div>
-
-								<div class="phase-card">
-									<div class="phase-number">3</div>
-									<h3>Leadership Development</h3>
-									<p>Organizing research teams so graduate students mentor undergraduates, building leadership skills and facilitating collaborative progress across diverse research areas including additive manufacturing, fracture mechanics, and materials characterization.</p>
-								</div>
-
-								<div class="phase-card">
-									<div class="phase-number">4</div>
-									<h3>Supportive Culture</h3>
-									<p>Emphasizing open communication, professional skill-building, and a supportive environment that empowers students to grow intellectually and contribute meaningfully to the research program.</p>
-								</div>
-							</div>
-
-							<div class="mentoring-focus">
-								<h3>Key Focus Areas</h3>
-								<div class="focus-items">
-									<div class="focus-item">
-										<strong>Research Independence:</strong>
-										<p>Developing autonomous research capabilities through structured guidance and increasing responsibility.</p>
-									</div>
-									<div class="focus-item">
-										<strong>Technical Skills:</strong>
-										<p>Building proficiency in computational tools, experimental methods, and data analysis techniques.</p>
-									</div>
-									<div class="focus-item">
-										<strong>Communication:</strong>
-										<p>Cultivating ability to present findings, write technical reports, and collaborate across disciplines.</p>
-									</div>
-									<div class="focus-item">
-										<strong>Professional Development:</strong>
-										<p>Preparing students for careers in academia, industry, or research organizations.</p>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -811,40 +749,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		line-height: 1.6;
 	}
 
-	/* Mentoring Styles */
-	.mentoring-content {
-		display: flex;
-		flex-direction: column;
-		gap: 2.5rem;
-	}
-
-	.mentoring-intro {
-		padding: 1.5rem;
-		border-left: 4px solid var(--accent-regular);
-		background: rgba(var(--accent-color), 0.05);
-		border-radius: 0.875rem;
-	}
-
-	.mentoring-intro p {
-		margin: 0;
-		font-size: var(--text-lg);
-		color: var(--gray-100);
-		font-weight: 500;
-		line-height: 1.6;
-	}
-
-	.mentoring-phases {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-	}
-
-	@media (min-width: 640px) {
-		.mentoring-phases {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
 	.phase-card {
 		padding: 1.5rem;
 		border: 1px solid var(--gray-800);
@@ -896,18 +800,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		line-height: 1.6;
 		position: relative;
 		z-index: 1;
-	}
-
-	.mentoring-focus {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-
-	.mentoring-focus h3 {
-		font-size: var(--text-lg);
-		color: var(--gray-0);
-		margin: 0;
 	}
 
 	.focus-items {
