@@ -1,7 +1,16 @@
 ---
+import { getCollection } from 'astro:content';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const research = await getCollection('research');
+const researchData = research[0].data;
+
+const overview = researchData.overview;
+const ongoing = researchData.ongoing || [];
+const longterm = researchData.longterm || [];
+const secondary = researchData.secondary || [];
 ---
 
 <BaseLayout title="Research | Bhaskar Vajipeyajula" description="Research areas and focus of Bhaskar Vajipeyajula">
@@ -33,40 +42,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					<div class="tab-content active" id="overview">
 						<div class="research-content">
 							<div class="intro-block">
-								<p>My research focuses on the intersection of multiple disciplines, including manufacturing science, fluid mechanics, and the collaborative use of computational and experimental methods. I am focusing on three key areas:</p>
+								<p>{overview.intro}</p>
 								<div class="research-pillars">
-									<div class="pillar-card">
-										<h3>Material Behavior</h3>
-										<p>Investigating the mechanical behavior of materials under various manufacturing processes to understand their properties better.</p>
-									</div>
-									<div class="pillar-card">
-										<h3>Advanced Modeling</h3>
-										<p>Applying the theory of continua, data-driven modeling, and experimental mechanics through innovative testing and constitutive models.</p>
-									</div>
-									<div class="pillar-card">
-										<h3>Manufacturing Integration</h3>
-										<p>Exploring the integration of additive manufacturing in fluid mechanics to revolutionize fluid systems and address fundamental challenges.</p>
-									</div>
+									{overview.pillars.map((pillar) => (
+										<div class="pillar-card">
+											<h3>{pillar.title}</h3>
+											<p>{pillar.description}</p>
+										</div>
+									))}
 								</div>
 							</div>
 
 							<div class="research-areas">
 								<h2>Core Research Areas</h2>
 								<div class="areas-grid">
-									<div class="area-card">
-										<h3>Viscoelastic Modeling</h3>
-										<p>Developing thermodynamic models and frameworks to capture nonlinear viscoelastic behavior in complex materials, particularly asphaltic materials and polymeric solutions. I create computational modules that solve viscoelastic constitutive equations and study phenomena like Rayleigh–Bénard convection in non-Newtonian fluid systems.</p>
-									</div>
-									
-									<div class="area-card">
-										<h3>Additive Manufacturing</h3>
-										<p>Expertise in Fused Filament Fabrication (FFF/3D printing) and Friction Stir Additive Manufacturing (FSAM). My work focuses on process optimization, support structure design, and characterization of mechanical properties in additively manufactured polymeric and metallic materials.</p>
-									</div>
-
-									<div class="area-card">
-										<h3>Fracture Mechanics</h3>
-										<p>Analysis of fracture toughness in thermoplastics produced through FFF processes. I investigate stress concentrations in porous materials and work on understanding failure mechanisms in additively manufactured components.</p>
-									</div>
+									{overview.coreAreas.map((area) => (
+										<div class="area-card">
+											<h3>{area.title}</h3>
+											<p>{area.description}</p>
+										</div>
+									))}
 								</div>
 							</div>
 						</div>
@@ -75,135 +70,54 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					<!-- Ongoing Research Tab -->
 					<div class="tab-content" id="ongoing">
 						<div class="research-cards-grid">
-							<div class="research-card">
-								<div class="card-header">
-									<h3 class="card-title">Optimizing Support Structures in Metal 3D Printing</h3>
+							{ongoing.map((project) => (
+								<div class="research-card">
+									<div class="card-header">
+										<h3 class="card-title">{project.title}</h3>
+									</div>
+									<p class="card-description">{project.description}</p>
+									<ul class="card-highlights">
+										{project.highlights.map((highlight) => (
+											<li>{highlight}</li>
+										))}
+									</ul>
 								</div>
-								<p class="card-description">
-									Serving as a CO-PI on a funded project aimed at removing or weakening supports for metal additive manufacturing parts. The project develops protocols to introduce weak inclusions within supports to reduce material's shear strength while maintaining support functionality by varying local porosity during printing.
-								</p>
-								<ul class="card-highlights">
-									<li>Reduces reliance on skilled labor for post-processing</li>
-									<li>Improves automation potential of metal 3D printing</li>
-									<li>Enhances scalability and cost-effectiveness</li>
-								</ul>
-							</div>
-
-							<div class="research-card">
-								<div class="card-header">
-									<h3 class="card-title">Fatigue Analysis of Polymers</h3>
-								</div>
-								<p class="card-description">
-									Addressing challenges posed by fatigue in polymers subjected to repeated mechanical and thermal load cycles. While extensive research exists on fatigue in metals, understanding these mechanisms in polymers remains understudied, hindering material selection for achieving desired load support and longevity.
-								</p>
-								<ul class="card-highlights">
-									<li>Establishes framework for resilient polymer designs</li>
-									<li>Focuses on medical devices and aerospace applications</li>
-									<li>Bridges knowledge gap in polymer fatigue behavior</li>
-								</ul>
-							</div>
-
-							<div class="research-card">
-								<div class="card-header">
-									<h3 class="card-title">Support Structure Characterization</h3>
-								</div>
-								<p class="card-description">
-									Research into understanding and characterizing support structures in powder bed fusion to improve part quality and reduce material waste. This work complements optimization efforts in metal additive manufacturing.
-								</p>
-								<ul class="card-highlights">
-									<li>Improves part quality</li>
-									<li>Reduces material waste</li>
-									<li>Enhances manufacturing efficiency</li>
-								</ul>
-							</div>
-
-							<div class="research-card">
-								<div class="card-header">
-									<h3 class="card-title">Energetic Materials Certification</h3>
-								</div>
-								<p class="card-description">
-									Development of experiment-driven certification methods for energetic materials manufactured using powder material extrusion techniques. This research addresses critical needs in advancing additive manufacturing capabilities for specialized materials.
-								</p>
-								<ul class="card-highlights">
-									<li>Develops standardized certification protocols</li>
-									<li>Advances powder material extrusion techniques</li>
-									<li>Enables new applications in energetic systems</li>
-								</ul>
-							</div>
+							))}
 						</div>
 					</div>
 
 					<!-- Long-Term Vision Tab -->
 					<div class="tab-content" id="longterm">
 						<div class="longterm-content">
-							<div class="thrust-card primary">
-								<div class="thrust-header">
-									<h3>Thrust 1: Smart Manufacturing of 3D Printed Polymers</h3>
-									<span class="thrust-badge">Process Optimization</span>
+							{longterm.map((thrust) => (
+								<div class="thrust-card primary">
+									<div class="thrust-header">
+										<h3>{thrust.title}</h3>
+										<span class="thrust-badge">{thrust.badge}</span>
+									</div>
+									<p class="thrust-subtitle">{thrust.subtitle}</p>
+									<p>{thrust.description}</p>
+									<div class="research-approach">
+										<h4>Research Approach:</h4>
+										<ul>
+											{thrust.approach.map((item) => (
+												<li>{item}</li>
+											))}
+										</ul>
+									</div>
+									<p><strong>Applications:</strong> {thrust.applications}</p>
 								</div>
-								<p class="thrust-subtitle">Linking Process Parameters to Residual Stress Through Thermodynamic Modeling</p>
-								<p>While additive manufacturing empowers creation of complex 3D objects with design freedom, accurately predicting final assembly strength remains challenging due to material anisotropy. This research aims to bridge the gap by analyzing how printing parameters influence residual stress and its long-term impact on part behavior.</p>
-								<div class="research-approach">
-									<h4>Research Approach:</h4>
-									<ul>
-										<li>Leverage thermodynamic framework to model anisotropic viscoelastic response</li>
-										<li>Develop experimental protocols using X-ray diffraction (XRD) for internal stress analysis</li>
-										<li>Incorporate in-situ, non-destructive process monitoring via thermal imaging</li>
-										<li>Enable real-time feedback for adaptive control</li>
-									</ul>
-								</div>
-								<p><strong>Applications:</strong> Aerospace, transportation, low-cost prototyping</p>
-							</div>
-
-							<div class="thrust-card primary">
-								<div class="thrust-header">
-									<h3>Thrust 2: Fatigue Behavior and Life Cycle Assessment of Metal AM Parts</h3>
-									<span class="thrust-badge">Multiscale Analysis</span>
-								</div>
-								<p class="thrust-subtitle">A Multiscale Perspective</p>
-								<p>Metal additive manufacturing can produce complex components once unattainable through conventional methods. Understanding material response under cyclic loading requires multiscale analysis encompassing crack initiation, propagation, and final fracture stages.</p>
-								<div class="research-approach">
-									<h4>Research Approach:</h4>
-									<ul>
-										<li>Analyze effects of process parameters across multiple scales</li>
-										<li>Investigate pores and surrounding material behavior</li>
-										<li>Develop strategies for mitigating damage at each stage</li>
-										<li>Enable early-stage damage prevention</li>
-									</ul>
-								</div>
-								<p><strong>Applications:</strong> Aerospace, automotive industries</p>
-							</div>
-
-							<div class="thrust-card primary">
-								<div class="thrust-header">
-									<h3>Thrust 3: Instability-Driven Mixing of Viscoelastic Fluids</h3>
-									<span class="thrust-badge">Complex Domains</span>
-								</div>
-								<p class="thrust-subtitle">In Complex Domains</p>
-								<p>This research focuses on the intricate flow behavior of viscoelastic fluids in complex structures. Unlike Newtonian fluids, these materials exhibit unique elastic instabilities even at low flow rates, posing challenges for mixing applications.</p>
-								<div class="research-approach">
-									<h4>Research Approach:</h4>
-									<ul>
-										<li>Develop computational models for viscoelastic fluid flow through complex geometries</li>
-										<li>Study elastic turbulence onset and control mechanisms</li>
-										<li>Leverage static mixers for efficiency and compactness</li>
-										<li>Conduct rigorous experimental validation (3-5 year focus)</li>
-									</ul>
-								</div>
-								<p><strong>Applications:</strong> Pharmaceuticals, food processing, chemical, manufacturing industries</p>
-							</div>
+							))}
 
 							<div class="secondary-projects">
 								<h3>Secondary Projects of Interest</h3>
 								<div class="secondary-grid">
-									<div class="secondary-card">
-										<h4>Green Production & Sustainable Manufacturing</h4>
-										<p>Investigating combining recycled and virgin polymers in additive manufacturing to promote sustainable production and minimize environmental impact while optimizing resource use.</p>
-									</div>
-									<div class="secondary-card">
-										<h4>Mathematical Drug Delivery Modeling</h4>
-										<p>Applying mathematical and computational techniques to simulate interactions between Newtonian fluids (pharmaceutical drugs) and non-Newtonian fluids (blood), including diffusion effects and instabilities.</p>
-									</div>
+									{secondary.map((project) => (
+										<div class="secondary-card">
+											<h4>{project.title}</h4>
+											<p>{project.description}</p>
+										</div>
+									))}
 								</div>
 							</div>
 						</div>

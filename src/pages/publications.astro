@@ -1,7 +1,15 @@
 ---
+import { getCollection } from 'astro:content';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const publications = await getCollection('publications');
+const pubData = publications[0].data;
+
+const journalPubs = pubData.journal || [];
+const conferencePubs = pubData.conference || [];
+const prepPubs = pubData.preparation || [];
 ---
 
 <BaseLayout title="Publications | Bhaskar Vajipeyajula" description="Publications and research output">
@@ -17,235 +25,62 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					<div class="tabs-nav">
 						<button class="tab-btn active" data-tab="journal">
 							<span class="tab-label">Journal Publications</span>
-							<span class="tab-count">10</span>
+							<span class="tab-count">{journalPubs.length}</span>
 						</button>
 						<button class="tab-btn" data-tab="conference">
 							<span class="tab-label">Conference</span>
-							<span class="tab-count">8</span>
+							<span class="tab-count">{conferencePubs.length}</span>
 						</button>
 						<button class="tab-btn" data-tab="preparation">
 							<span class="tab-label">In Preparation</span>
-							<span class="tab-count">2</span>
+							<span class="tab-count">{prepPubs.length}</span>
 						</button>
 					</div>
 
 					<!-- Journal Publications Tab -->
 					<div class="tab-content active" id="journal">
 						<div class="pub-cards-grid">
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2025</span>
-									<span class="pub-type">Journal</span>
+							{journalPubs.map((pub) => (
+								<div class="pub-card">
+									<div class="pub-meta">
+										<span class="pub-year">{pub.year}</span>
+										<span class="pub-type">Journal</span>
+									</div>
+									<h3 class="pub-title">{pub.title}</h3>
+									<p class="pub-authors">{pub.authors}</p>
+									<p class="pub-journal">{pub.journal}</p>
+									<a href={`mailto:vaji19@tamu.edu?subject=Requesting ${pub.title}&body=Hey! I like your work and would love to read this. Thank you`} class="request-btn">Request</a>
 								</div>
-								<h3 class="pub-title">Process-Induced Shrinking and Warping in Additively Manufactured Polycarbonate Plates</h3>
-								<p class="pub-authors">P. Sreejith, A. E. Patterson, K. R. Rajagopal, and B. Vajipeyajula</p>
-								<p class="pub-journal">Applications in Engineering Science, pp. 100220</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Process-Induced Shrinking and Warping in Additively Manufactured Polycarbonate Plates&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2025</span>
-									<span class="pub-type">Journal</span>
-								</div>
-								<h3 class="pub-title">Effect of Specimen Size, Layout, and Bead Width on the Linear Elastic Fracture Toughness of FFF-Processed Polylactide</h3>
-								<p class="pub-authors">J. Beltra Mira, V. Restrepo, B. Vajipeyajula, and A. E. Patterson</p>
-								<p class="pub-journal">Engineering Fracture Mechanics, vol. 315, pp. 110842</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Effect of Specimen Size, Layout, and Bead Width on the Linear Elastic Fracture Toughness of FFF-Processed Polylactide&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2025</span>
-									<span class="pub-type">Journal</span>
-								</div>
-								<h3 class="pub-title">Parameter Optimization for Dissimilar Aluminum Alloys Joined Using Friction Stir Additive Manufacturing: A Screening Study</h3>
-								<p class="pub-authors">S. K. Selvaraj, A. L. Manoj, A. B. Mathew, A. V. Govind, G. Sundaramali, U. Chadha, B. Vajipeyajula, and A. E. Patterson</p>
-								<p class="pub-journal">Engineering Reports, vol. 7, pp. e13039</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Parameter Optimization for Dissimilar Aluminum Alloys Joined Using Friction Stir Additive Manufacturing: A Screening Study&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2024</span>
-									<span class="pub-type">Journal</span>
-								</div>
-								<h3 class="pub-title">A Thermodynamic Viscoelastic Model to Capture the Effects of Confinement Pressure on Asphalt Mixtures</h3>
-								<p class="pub-authors">B. Vajipeyajula, A. Narayan, E. Masad, and K. R. Rajagopal</p>
-								<p class="pub-journal">International Journal of Pavement Engineering, vol. 25</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting A Thermodynamic Viscoelastic Model to Capture the Effects of Confinement Pressure on Asphalt Mixtures&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2023</span>
-									<span class="pub-type">Journal</span>
-								</div>
-								<h3 class="pub-title">Stress Concentration Due to the Presence of a Rigid Elliptical Inclusion in Porous Elastic Solids Described by a New Class of Constitutive Relations</h3>
-								<p class="pub-authors">B. Vajipeyajula, P. Murru, and K. R. Rajagopal</p>
-								<p class="pub-journal">International Journal of Elasticity</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Stress Concentration Due to the Presence of a Rigid Elliptical Inclusion in Porous Elastic Solids Described by a New Class of Constitutive Relations&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2023</span>
-									<span class="pub-type">Journal</span>
-								</div>
-								<h3 class="pub-title">Stress Concentration Due to an Elliptic Hole in a Porous Elastic Plate</h3>
-								<p class="pub-authors">B. Vajipeyajula, P. Murru, and K. R. Rajagopal</p>
-								<p class="pub-journal">Mathematics and Mechanics of Solids, vol. 28(3), pp. 854–869</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Stress Concentration Due to an Elliptic Hole in a Porous Elastic Plate&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2020</span>
-									<span class="pub-type">Journal</span>
-								</div>
-								<h3 class="pub-title">Assessing Permanent Deformation of Reclaimed Asphalt Blended Binders Using Linear and Non-linear Viscoelasticity Theory</h3>
-								<p class="pub-authors">B. Vajipeyajula, E. Masad, K. L. Roja, and K. R. Rajagopal</p>
-								<p class="pub-journal">Materials and Structures, vol. 53</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Assessing Permanent Deformation of Reclaimed Asphalt Blended Binders Using Linear and Non-linear Viscoelasticity Theory&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2020</span>
-									<span class="pub-type">Journal</span>
-								</div>
-								<h3 class="pub-title">Chemical and Multi-scale Rheological Characterization of Recycled and Virgin Asphalt Binder</h3>
-								<p class="pub-authors">K. L. Roja, B. Vajipeyajula, and E. Masad</p>
-								<p class="pub-journal">Construction and Building Materials, vol. 261</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Chemical and Multi-scale Rheological Characterization of Recycled and Virgin Asphalt Binder&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2019</span>
-									<span class="pub-type">Journal</span>
-								</div>
-								<h3 class="pub-title">Two-Constituent Nonlinear Viscoelastic Model for Asphalt Mixtures</h3>
-								<p class="pub-authors">B. Vajipeyajula, E. Masad, K. L. Roja, M. Sadeq, and K. R. Rajagopal</p>
-								<p class="pub-journal">Road Materials and Pavement Design</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Two-Constituent Nonlinear Viscoelastic Model for Asphalt Mixtures&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2017</span>
-									<span class="pub-type">Journal</span>
-								</div>
-								<h3 class="pub-title">Dynamics of a Single Buoyant Plume in FENE-P Fluid</h3>
-								<p class="pub-authors">B. Vajipeyajula, T. Krishna, and R. Handler</p>
-								<p class="pub-journal">Physics of Fluids, vol. 29</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Dynamics of a Single Buoyant Plume in FENE-P Fluid&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
+							))}
 						</div>
 					</div>
 
 					<!-- Conference Publications Tab -->
 					<div class="tab-content" id="conference">
 						<div class="pub-cards-grid">
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2024</span>
-									<span class="pub-type">Conference</span>
+							{conferencePubs.map((pub) => (
+								<div class="pub-card">
+									<div class="pub-meta">
+										<span class="pub-year">{pub.year}</span>
+										<span class="pub-type">Conference</span>
+									</div>
+									<h3 class="pub-title">{pub.title}</h3>
+									<p class="pub-authors">{pub.authors}</p>
+									<p class="pub-journal">{pub.journal}</p>
+									<a href={`mailto:vaji19@tamu.edu?subject=Requesting ${pub.title}&body=Hey! I like your work and would love to read this. Thank you`} class="request-btn">Request</a>
 								</div>
-								<h3 class="pub-title">Designing Additively Manufactured Energetic Materials Based on Property/Process Relationships</h3>
-								<p class="pub-authors">S. Afolabi, E. Kabir, B. Vajipeyajula, and A. E. Patterson</p>
-								<p class="pub-journal">Texas A&M Conference on Energy</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Designing Additively Manufactured Energetic Materials Based on Property/Process Relationships&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2024</span>
-									<span class="pub-type">Conference</span>
-								</div>
-								<h3 class="pub-title">Designing Manufacturing Systems Under Energy Scarcity in Expeditionary Environments</h3>
-								<p class="pub-authors">A. E. Patterson and B. Vajipeyajula</p>
-								<p class="pub-journal">Texas A&M Conference on Energy</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Designing Manufacturing Systems Under Energy Scarcity in Expeditionary Environments&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2024</span>
-									<span class="pub-type">Conference</span>
-								</div>
-								<h3 class="pub-title">Mapping Energy Consumption for Powder Material Extrusion Additive Manufacturing</h3>
-								<p class="pub-authors">G. Harmon, E. Kabir, B. Vajipeyajula, and A. E. Patterson</p>
-								<p class="pub-journal">Texas A&M Conference on Energy</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Mapping Energy Consumption for Powder Material Extrusion Additive Manufacturing&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2023</span>
-									<span class="pub-type">Conference</span>
-								</div>
-								<h3 class="pub-title">Impact of Compact Tension Specimen Size on Fracture Toughness of FFF Processed Thermoplastics</h3>
-								<p class="pub-authors">J. Beltra Mira, V. Restrepo, B. Vajipeyajula, and A. E. Patterson</p>
-								<p class="pub-journal">IWPDF</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Impact of Compact Tension Specimen Size on Fracture Toughness of FFF Processed Thermoplastics&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2022</span>
-									<span class="pub-type">Conference</span>
-								</div>
-								<h3 class="pub-title">Influence of Matrix Material on Impact Properties of Chopped Carbon Fiber-Thermoplastic Composites Made Using FDM/FFF</h3>
-								<p class="pub-authors">A. E. Patterson, S. Hasanov, and B. Vajipeyajula</p>
-								<p class="pub-journal">ASME</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Influence of Matrix Material on Impact Properties of Chopped Carbon Fiber-Thermoplastic Composites Made Using FDM/FFF&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2022</span>
-									<span class="pub-type">Conference</span>
-								</div>
-								<h3 class="pub-title">System Architecture and Design Parameters for Extrusion-Based Autonomous Construction Systems</h3>
-								<p class="pub-authors">A. E. Patterson, B. Vajipeyajula, and W. R. Norris</p>
-								<p class="pub-journal">ASME</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting System Architecture and Design Parameters for Extrusion-Based Autonomous Construction Systems&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2020</span>
-									<span class="pub-type">Conference</span>
-								</div>
-								<h3 class="pub-title">Permanent Deformation of Reclaimed Asphalt Blended Binders Using Nonlinear Viscoelastic Theory</h3>
-								<p class="pub-authors">B. Vajipeyajula, E. Masad, K. L. Roja, and K. R. Rajagopal</p>
-								<p class="pub-journal">AM3P</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Permanent Deformation of Reclaimed Asphalt Blended Binders Using Nonlinear Viscoelastic Theory&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
-
-							<div class="pub-card">
-								<div class="pub-meta">
-									<span class="pub-year">2020</span>
-									<span class="pub-type">Conference</span>
-								</div>
-								<h3 class="pub-title">Multi-Scale Evaluation of Asphalt Binders Containing Different Proportions of Reclaimed Asphalt Pavement</h3>
-								<p class="pub-authors">K. L. Roja, B. Vajipeyajula, and E. Masad</p>
-								<p class="pub-journal">RILEM – ISBM Lyon</p>
-								<a href="mailto:vaji19@tamu.edu?subject=Requesting Multi-Scale Evaluation of Asphalt Binders Containing Different Proportions of Reclaimed Asphalt Pavement&body=Hey! I like your work and would love to read this. Thank you" class="request-btn">Request</a>
-							</div>
+							))}
 						</div>
 					</div>
 
 					<!-- Papers in Preparation Tab -->
 					<div class="tab-content" id="preparation">
 						<div class="prep-cards-grid">
-							<div class="pub-card prep">
-								<h3 class="pub-title">Impact of matrix material on the flexural strength of the additively manufactured polymeric parts</h3>
-							</div>
-							<div class="pub-card prep">
-								<h3 class="pub-title">Density-driven model to analyse fatigue and failure initiation in PDMS</h3>
-							</div>
+							{prepPubs.map((pub) => (
+								<div class="pub-card prep">
+									<h3 class="pub-title">{pub.title}</h3>
+								</div>
+							))}
 						</div>
 					</div>
 				</div>

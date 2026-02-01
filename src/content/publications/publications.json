@@ -1,0 +1,162 @@
+{
+  "journal": [
+    {
+      "id": "2025-shrinking-warping",
+      "title": "Process-Induced Shrinking and Warping in Additively Manufactured Polycarbonate Plates",
+      "authors": "P. Sreejith, A. E. Patterson, K. R. Rajagopal, and B. Vajipeyajula",
+      "journal": "Applications in Engineering Science, pp. 100220",
+      "year": 2025,
+      "type": "journal"
+    },
+    {
+      "id": "2025-fracture-toughness",
+      "title": "Effect of Specimen Size, Layout, and Bead Width on the Linear Elastic Fracture Toughness of FFF-Processed Polylactide",
+      "authors": "J. Beltra Mira, V. Restrepo, B. Vajipeyajula, and A. E. Patterson",
+      "journal": "Engineering Fracture Mechanics, vol. 315, pp. 110842",
+      "year": 2025,
+      "type": "journal"
+    },
+    {
+      "id": "2025-aluminum-alloys",
+      "title": "Parameter Optimization for Dissimilar Aluminum Alloys Joined Using Friction Stir Additive Manufacturing: A Screening Study",
+      "authors": "S. K. Selvaraj, A. L. Manoj, A. B. Mathew, A. V. Govind, G. Sundaramali, U. Chadha, B. Vajipeyajula, and A. E. Patterson",
+      "journal": "Engineering Reports, vol. 7, pp. e13039",
+      "year": 2025,
+      "type": "journal"
+    },
+    {
+      "id": "2024-viscoelastic-asphalt",
+      "title": "A Thermodynamic Viscoelastic Model to Capture the Effects of Confinement Pressure on Asphalt Mixtures",
+      "authors": "B. Vajipeyajula, A. Narayan, E. Masad, and K. R. Rajagopal",
+      "journal": "International Journal of Pavement Engineering, vol. 25",
+      "year": 2024,
+      "type": "journal"
+    },
+    {
+      "id": "2023-stress-concentration-inclusion",
+      "title": "Stress Concentration Due to the Presence of a Rigid Elliptical Inclusion in Porous Elastic Solids Described by a New Class of Constitutive Relations",
+      "authors": "B. Vajipeyajula, P. Murru, and K. R. Rajagopal",
+      "journal": "International Journal of Elasticity",
+      "year": 2023,
+      "type": "journal"
+    },
+    {
+      "id": "2023-stress-concentration-hole",
+      "title": "Stress Concentration Due to an Elliptic Hole in a Porous Elastic Plate",
+      "authors": "B. Vajipeyajula, P. Murru, and K. R. Rajagopal",
+      "journal": "Mathematics and Mechanics of Solids, vol. 28(3), pp. 854–869",
+      "year": 2023,
+      "type": "journal"
+    },
+    {
+      "id": "2020-permanent-deformation",
+      "title": "Assessing Permanent Deformation of Reclaimed Asphalt Blended Binders Using Linear and Non-linear Viscoelasticity Theory",
+      "authors": "B. Vajipeyajula, E. Masad, K. L. Roja, and K. R. Rajagopal",
+      "journal": "Materials and Structures, vol. 53",
+      "year": 2020,
+      "type": "journal"
+    },
+    {
+      "id": "2020-chemical-rheological",
+      "title": "Chemical and Multi-scale Rheological Characterization of Recycled and Virgin Asphalt Binder",
+      "authors": "K. L. Roja, B. Vajipeyajula, and E. Masad",
+      "journal": "Construction and Building Materials, vol. 261",
+      "year": 2020,
+      "type": "journal"
+    },
+    {
+      "id": "2019-two-constituent",
+      "title": "Two-Constituent Nonlinear Viscoelastic Model for Asphalt Mixtures",
+      "authors": "B. Vajipeyajula, E. Masad, K. L. Roja, M. Sadeq, and K. R. Rajagopal",
+      "journal": "Road Materials and Pavement Design",
+      "year": 2019,
+      "type": "journal"
+    },
+    {
+      "id": "2017-buoyant-plume",
+      "title": "Dynamics of a Single Buoyant Plume in FENE-P Fluid",
+      "authors": "B. Vajipeyajula, T. Krishna, and R. Handler",
+      "journal": "Physics of Fluids, vol. 29",
+      "year": 2017,
+      "type": "journal"
+    }
+  ],
+  "conference": [
+    {
+      "id": "2024-energetic-materials",
+      "title": "Designing Additively Manufactured Energetic Materials Based on Property/Process Relationships",
+      "authors": "S. Afolabi, E. Kabir, B. Vajipeyajula, and A. E. Patterson",
+      "journal": "Texas A&M Conference on Energy",
+      "year": 2024,
+      "type": "conference"
+    },
+    {
+      "id": "2024-energy-scarcity",
+      "title": "Designing Manufacturing Systems Under Energy Scarcity in Expeditionary Environments",
+      "authors": "A. E. Patterson and B. Vajipeyajula",
+      "journal": "Texas A&M Conference on Energy",
+      "year": 2024,
+      "type": "conference"
+    },
+    {
+      "id": "2024-energy-consumption",
+      "title": "Mapping Energy Consumption for Powder Material Extrusion Additive Manufacturing",
+      "authors": "G. Harmon, E. Kabir, B. Vajipeyajula, and A. E. Patterson",
+      "journal": "Texas A&M Conference on Energy",
+      "year": 2024,
+      "type": "conference"
+    },
+    {
+      "id": "2023-fracture-tension",
+      "title": "Impact of Compact Tension Specimen Size on Fracture Toughness of FFF Processed Thermoplastics",
+      "authors": "J. Beltra Mira, V. Restrepo, B. Vajipeyajula, and A. E. Patterson",
+      "journal": "IWPDF",
+      "year": 2023,
+      "type": "conference"
+    },
+    {
+      "id": "2022-matrix-material",
+      "title": "Influence of Matrix Material on Impact Properties of Chopped Carbon Fiber-Thermoplastic Composites Made Using FDM/FFF",
+      "authors": "A. E. Patterson, S. Hasanov, and B. Vajipeyajula",
+      "journal": "ASME",
+      "year": 2022,
+      "type": "conference"
+    },
+    {
+      "id": "2022-autonomous-construction",
+      "title": "System Architecture and Design Parameters for Extrusion-Based Autonomous Construction Systems",
+      "authors": "A. E. Patterson, B. Vajipeyajula, and W. R. Norris",
+      "journal": "ASME",
+      "year": 2022,
+      "type": "conference"
+    },
+    {
+      "id": "2020-permanent-deformation-conference",
+      "title": "Permanent Deformation of Reclaimed Asphalt Blended Binders Using Nonlinear Viscoelastic Theory",
+      "authors": "B. Vajipeyajula, E. Masad, K. L. Roja, and K. R. Rajagopal",
+      "journal": "AM3P",
+      "year": 2020,
+      "type": "conference"
+    },
+    {
+      "id": "2020-multiscale-asphalt",
+      "title": "Multi-Scale Evaluation of Asphalt Binders Containing Different Proportions of Reclaimed Asphalt Pavement",
+      "authors": "K. L. Roja, B. Vajipeyajula, and E. Masad",
+      "journal": "RILEM – ISBM Lyon",
+      "year": 2020,
+      "type": "conference"
+    }
+  ],
+  "preparation": [
+    {
+      "id": "prep-flexural-strength",
+      "title": "Impact of matrix material on the flexural strength of the additively manufactured polymeric parts",
+      "type": "preparation"
+    },
+    {
+      "id": "prep-pdms-fatigue",
+      "title": "Density-driven model to analyse fatigue and failure initiation in PDMS",
+      "type": "preparation"
+    }
+  ]
+}

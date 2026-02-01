@@ -1,0 +1,129 @@
+{
+  "overview": {
+    "intro": "My research focuses on the intersection of multiple disciplines, including manufacturing science, fluid mechanics, and the collaborative use of computational and experimental methods. I am focusing on three key areas:",
+    "pillars": [
+      {
+        "title": "Material Behavior",
+        "description": "Investigating the mechanical behavior of materials under various manufacturing processes to understand their properties better."
+      },
+      {
+        "title": "Advanced Modeling",
+        "description": "Applying the theory of continua, data-driven modeling, and experimental mechanics through innovative testing and constitutive models."
+      },
+      {
+        "title": "Manufacturing Integration",
+        "description": "Exploring the integration of additive manufacturing in fluid mechanics to revolutionize fluid systems and address fundamental challenges."
+      }
+    ],
+    "coreAreas": [
+      {
+        "title": "Viscoelastic Modeling",
+        "description": "Developing thermodynamic models and frameworks to capture nonlinear viscoelastic behavior in complex materials, particularly asphaltic materials and polymeric solutions. I create computational modules that solve viscoelastic constitutive equations and study phenomena like Rayleigh–Bénard convection in non-Newtonian fluid systems."
+      },
+      {
+        "title": "Additive Manufacturing",
+        "description": "Expertise in Fused Filament Fabrication (FFF/3D printing) and Friction Stir Additive Manufacturing (FSAM). My work focuses on process optimization, support structure design, and characterization of mechanical properties in additively manufactured polymeric and metallic materials."
+      },
+      {
+        "title": "Fracture Mechanics",
+        "description": "Analysis of fracture toughness in thermoplastics produced through FFF processes. I investigate stress concentrations in porous materials and work on understanding failure mechanisms in additively manufactured components."
+      }
+    ]
+  },
+  "ongoing": [
+    {
+      "id": "ongoing-support-structures",
+      "title": "Optimizing Support Structures in Metal 3D Printing",
+      "description": "Serving as a CO-PI on a funded project aimed at removing or weakening supports for metal additive manufacturing parts. The project develops protocols to introduce weak inclusions within supports to reduce material's shear strength while maintaining support functionality by varying local porosity during printing.",
+      "highlights": [
+        "Reduces reliance on skilled labor for post-processing",
+        "Improves automation potential of metal 3D printing",
+        "Enhances scalability and cost-effectiveness"
+      ]
+    },
+    {
+      "id": "ongoing-fatigue-polymers",
+      "title": "Fatigue Analysis of Polymers",
+      "description": "Addressing challenges posed by fatigue in polymers subjected to repeated mechanical and thermal load cycles. While extensive research exists on fatigue in metals, understanding these mechanisms in polymers remains understudied, hindering material selection for achieving desired load support and longevity.",
+      "highlights": [
+        "Establishes framework for resilient polymer designs",
+        "Focuses on medical devices and aerospace applications",
+        "Bridges knowledge gap in polymer fatigue behavior"
+      ]
+    },
+    {
+      "id": "ongoing-support-characterization",
+      "title": "Support Structure Characterization",
+      "description": "Research into understanding and characterizing support structures in powder bed fusion to improve part quality and reduce material waste. This work complements optimization efforts in metal additive manufacturing.",
+      "highlights": [
+        "Improves part quality",
+        "Reduces material waste",
+        "Enhances manufacturing efficiency"
+      ]
+    },
+    {
+      "id": "ongoing-energetic-materials",
+      "title": "Energetic Materials Certification",
+      "description": "Development of experiment-driven certification methods for energetic materials manufactured using powder material extrusion techniques. This research addresses critical needs in advancing additive manufacturing capabilities for specialized materials.",
+      "highlights": [
+        "Develops standardized certification protocols",
+        "Advances powder material extrusion techniques",
+        "Enables new applications in energetic systems"
+      ]
+    }
+  ],
+  "longterm": [
+    {
+      "id": "thrust-1-smart-manufacturing",
+      "title": "Smart Manufacturing of 3D Printed Polymers",
+      "subtitle": "Linking Process Parameters to Residual Stress Through Thermodynamic Modeling",
+      "badge": "Process Optimization",
+      "description": "While additive manufacturing empowers creation of complex 3D objects with design freedom, accurately predicting final assembly strength remains challenging due to material anisotropy. This research aims to bridge the gap by analyzing how printing parameters influence residual stress and its long-term impact on part behavior.",
+      "approach": [
+        "Leverage thermodynamic framework to model anisotropic viscoelastic response",
+        "Develop experimental protocols using X-ray diffraction (XRD) for internal stress analysis",
+        "Incorporate in-situ, non-destructive process monitoring via thermal imaging",
+        "Enable real-time feedback for adaptive control"
+      ],
+      "applications": "Aerospace, transportation, low-cost prototyping"
+    },
+    {
+      "id": "thrust-2-fatigue-metal-am",
+      "title": "Fatigue Behavior and Life Cycle Assessment of Metal AM Parts",
+      "subtitle": "A Multiscale Perspective",
+      "badge": "Multiscale Analysis",
+      "description": "Metal additive manufacturing can produce complex components once unattainable through conventional methods. Understanding material response under cyclic loading requires multiscale analysis encompassing crack initiation, propagation, and final fracture stages.",
+      "approach": [
+        "Analyze effects of process parameters across multiple scales",
+        "Investigate pores and surrounding material behavior",
+        "Develop strategies for mitigating damage at each stage",
+        "Enable early-stage damage prevention"
+      ],
+      "applications": "Aerospace, automotive industries"
+    },
+    {
+      "id": "thrust-3-viscoelastic-fluids",
+      "title": "Instability-Driven Mixing of Viscoelastic Fluids",
+      "subtitle": "In Complex Domains",
+      "badge": "Complex Domains",
+      "description": "This research focuses on the intricate flow behavior of viscoelastic fluids in complex structures. Unlike Newtonian fluids, these materials exhibit unique elastic instabilities even at low flow rates, posing challenges for mixing applications.",
+      "approach": [
+        "Develop computational models for viscoelastic fluid flow through complex geometries",
+        "Study elastic turbulence onset and control mechanisms",
+        "Leverage static mixers for efficiency and compactness",
+        "Conduct rigorous experimental validation (3-5 year focus)"
+      ],
+      "applications": "Pharmaceuticals, food processing, chemical, manufacturing industries"
+    }
+  ],
+  "secondary": [
+    {
+      "title": "Green Production & Sustainable Manufacturing",
+      "description": "Investigating combining recycled and virgin polymers in additive manufacturing to promote sustainable production and minimize environmental impact while optimizing resource use."
+    },
+    {
+      "title": "Mathematical Drug Delivery Modeling",
+      "description": "Applying mathematical and computational techniques to simulate interactions between Newtonian fluids (pharmaceutical drugs) and non-Newtonian fluids (blood), including diffusion effects and instabilities."
+    }
+  ]
+}
