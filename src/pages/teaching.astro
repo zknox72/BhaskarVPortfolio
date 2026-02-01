@@ -1,0 +1,188 @@
+---
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Teaching | Bhaskar Vajipeyajula" description="Teaching experience and courses">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Teaching"
+				tagline="Committed to engineering education and student mentorship with a focus on hands-on learning."
+			/>
+
+			<section>
+				<h2 class="section-title">Current Position</h2>
+				<div class="content">
+					<h3>Instructional Assistant Professor</h3>
+					<p>Engineering Technology and Industrial Distribution, Texas A&M University (2021 – Present)</p>
+					
+					<h4>Courses Taught:</h4>
+					<ul>
+						<li><strong>MMET 401:</strong> Fluid Power Transmission</li>
+						<li><strong>MMET 301:</strong> Mechanical Power Transmission</li>
+						<li><strong>MMET 281:</strong> Manufacturing and Assembly Processes II</li>
+						<li><strong>MMET 275:</strong> Mechanics for Technologists</li>
+						<li><strong>MMET 370:</strong> Thermodynamics for Technologists</li>
+					</ul>
+
+					<h4>Teaching Innovations:</h4>
+					<p>I have redesigned MMET 281, 301, and 401 to enhance student engagement and hands-on learning experiences. Course content and assessments have been restructured to better align with program learning outcomes. I have modernized mechanical and fluid power labs to support interactive demonstrations and experiments, providing students with practical experience in engineering principles.</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Previous Teaching Experience</h2>
+				<div class="content">
+					<h3>Lecturer</h3>
+					<p>Department of Mechanical Engineering, Texas A&M University (2017 – 2018)</p>
+					<p><strong>Course:</strong> MEEN 404 (Engineering Laboratory)</p>
+					<p>Taught senior-level engineering design studio and mentored student teams in developing custom experimental equipment. Supported students in identifying research topics, defining requirements, conducting experiments, and interpreting results.</p>
+
+					<h3>Graduate Teaching Assistant</h3>
+					<p>Engineering Technology and Industrial Distribution, Texas A&M University (2015 – 2016, 2020 – 2021)</p>
+					<p>Delivered lecture and lab sessions on fluid and mechanical power transmission systems. Independently conducted CAD training (ProE, Inventor, SolidWorks) for over 240 students. Supervised and coordinated undergraduate teaching assistants; co-developed lab manuals and instructional materials.</p>
+
+					<h3>Graduate Teaching Assistant</h3>
+					<p>Department of Mechanical Engineering, Texas A&M University (2018 – 2019)</p>
+					<p><strong>Course:</strong> MEEN 464 (Heat Transfer)</p>
+					<p>Led lab sessions for undergraduate heat transfer course, reinforcing core thermal principles through hands-on experimentation and problem-solving.</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Student Mentoring</h2>
+				<div class="content">
+					<h3>Graduate Students (Master's Level)</h3>
+					<ul>
+						<li>Michael James Townsend — Texas A&M (2022–2023)</li>
+						<li>Jose Maria Beltra Mira — Texas A&M (2022–2023)</li>
+						<li>Cody Tew — Texas A&M (2022–2023)</li>
+						<li>Saranya Gunasekar — Texas A&M (2023–2025)</li>
+						<li>Jonathan Sanchez — Texas A&M (2023–2025)</li>
+					</ul>
+
+					<h3>Undergraduate Students</h3>
+					<ul>
+						<li>2022: Arden Sinclair, Rhett Lee, Aren Davis, Sebastian Salazar, Henry Harshfield, Devin Hooper, Danny Tran, Rodrigo De La Cabada, Yu-Tien Ku</li>
+						<li>2023: Adam Ledoux, Duy Pham, Cole Shannon</li>
+					</ul>
+
+					<p>I mentor students on research methodologies, experimental design, data analysis, and professional development. My approach emphasizes independent thinking while providing guidance through the research process.</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Teaching Philosophy</h2>
+				<div class="content">
+					<p>
+						I believe effective engineering education bridges theoretical knowledge with practical application. My teaching philosophy emphasizes:
+					</p>
+					<ul>
+						<li><strong>Hands-on Learning:</strong> Students learn best through active engagement with equipment and real-world problems.</li>
+						<li><strong>Student-Centered Design:</strong> Courses should be structured around student learning outcomes and individual learning styles.</li>
+						<li><strong>Research Integration:</strong> Incorporating current research into the classroom enhances student understanding and motivation.</li>
+						<li><strong>Mentorship:</strong> Beyond content delivery, I focus on developing students' critical thinking, problem-solving, and communication skills.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Awards & Recognition</h2>
+				<div class="content">
+					<ul>
+						<li>APT Provost Faculty Fellow — Nominated by College of Engineering (2024)</li>
+						<li>COE Engineering Teaching Impact Award — Nominated by College of Engineering (2024)</li>
+						<li>COE Engineering Teaching Impact Award — Nominated by Department of ETID (2024)</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	section h3 {
+		margin-top: 1rem;
+		margin-bottom: 0.5rem;
+		color: var(--gray-0);
+		font-size: var(--text-lg);
+	}
+
+	section h4 {
+		margin-top: 0.75rem;
+		margin-bottom: 0.5rem;
+		color: var(--gray-100);
+		font-size: var(--text-md);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content ul {
+		padding-left: 1.5rem;
+		margin: 0.5rem 0;
+	}
+
+	.content li {
+		margin: 0.5rem 0;
+		color: var(--gray-200);
+		line-height: 1.6;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

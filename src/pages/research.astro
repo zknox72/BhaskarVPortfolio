@@ -1,0 +1,1007 @@
+---
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Research | Bhaskar Vajipeyajula" description="Research areas and focus of Bhaskar Vajipeyajula">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Research"
+				tagline="My research focuses on understanding material behavior through computational modeling and experimental validation."
+			/>
+
+			<section class="research-section">
+				<div class="tabs-container">
+					<div class="tabs-nav">
+						<button class="tab-btn active" data-tab="overview">
+							<span class="tab-label">Research Overview</span>
+						</button>
+						<button class="tab-btn" data-tab="ongoing">
+							<span class="tab-label">Ongoing Research</span>
+						</button>
+						<button class="tab-btn" data-tab="longterm">
+							<span class="tab-label">Long-Term Vision</span>
+						</button>
+						<button class="tab-btn" data-tab="mentoring">
+							<span class="tab-label">Mentoring</span>
+						</button>
+					</div>
+
+					<!-- Research Overview Tab -->
+					<div class="tab-content active" id="overview">
+						<div class="research-content">
+							<div class="intro-block">
+								<p>My research focuses on the intersection of multiple disciplines, including manufacturing science, fluid mechanics, and the collaborative use of computational and experimental methods. I am focusing on three key areas:</p>
+								<div class="research-pillars">
+									<div class="pillar-card">
+										<h3>Material Behavior</h3>
+										<p>Investigating the mechanical behavior of materials under various manufacturing processes to understand their properties better.</p>
+									</div>
+									<div class="pillar-card">
+										<h3>Advanced Modeling</h3>
+										<p>Applying the theory of continua, data-driven modeling, and experimental mechanics through innovative testing and constitutive models.</p>
+									</div>
+									<div class="pillar-card">
+										<h3>Manufacturing Integration</h3>
+										<p>Exploring the integration of additive manufacturing in fluid mechanics to revolutionize fluid systems and address fundamental challenges.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="research-areas">
+								<h2>Core Research Areas</h2>
+								<div class="areas-grid">
+									<div class="area-card">
+										<h3>Viscoelastic Modeling</h3>
+										<p>Developing thermodynamic models and frameworks to capture nonlinear viscoelastic behavior in complex materials, particularly asphaltic materials and polymeric solutions. I create computational modules that solve viscoelastic constitutive equations and study phenomena like Rayleigh–Bénard convection in non-Newtonian fluid systems.</p>
+									</div>
+									
+									<div class="area-card">
+										<h3>Additive Manufacturing</h3>
+										<p>Expertise in Fused Filament Fabrication (FFF/3D printing) and Friction Stir Additive Manufacturing (FSAM). My work focuses on process optimization, support structure design, and characterization of mechanical properties in additively manufactured polymeric and metallic materials.</p>
+									</div>
+
+									<div class="area-card">
+										<h3>Fracture Mechanics</h3>
+										<p>Analysis of fracture toughness in thermoplastics produced through FFF processes. I investigate stress concentrations in porous materials and work on understanding failure mechanisms in additively manufactured components.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Ongoing Research Tab -->
+					<div class="tab-content" id="ongoing">
+						<div class="research-cards-grid">
+							<div class="research-card">
+								<div class="card-header">
+									<h3 class="card-title">Optimizing Support Structures in Metal 3D Printing</h3>
+								</div>
+								<p class="card-description">
+									Serving as a CO-PI on a funded project aimed at removing or weakening supports for metal additive manufacturing parts. The project develops protocols to introduce weak inclusions within supports to reduce material's shear strength while maintaining support functionality by varying local porosity during printing.
+								</p>
+								<ul class="card-highlights">
+									<li>Reduces reliance on skilled labor for post-processing</li>
+									<li>Improves automation potential of metal 3D printing</li>
+									<li>Enhances scalability and cost-effectiveness</li>
+								</ul>
+							</div>
+
+							<div class="research-card">
+								<div class="card-header">
+									<h3 class="card-title">Fatigue Analysis of Polymers</h3>
+								</div>
+								<p class="card-description">
+									Addressing challenges posed by fatigue in polymers subjected to repeated mechanical and thermal load cycles. While extensive research exists on fatigue in metals, understanding these mechanisms in polymers remains understudied, hindering material selection for achieving desired load support and longevity.
+								</p>
+								<ul class="card-highlights">
+									<li>Establishes framework for resilient polymer designs</li>
+									<li>Focuses on medical devices and aerospace applications</li>
+									<li>Bridges knowledge gap in polymer fatigue behavior</li>
+								</ul>
+							</div>
+
+							<div class="research-card">
+								<div class="card-header">
+									<h3 class="card-title">Support Structure Characterization</h3>
+								</div>
+								<p class="card-description">
+									Research into understanding and characterizing support structures in powder bed fusion to improve part quality and reduce material waste. This work complements optimization efforts in metal additive manufacturing.
+								</p>
+								<ul class="card-highlights">
+									<li>Improves part quality</li>
+									<li>Reduces material waste</li>
+									<li>Enhances manufacturing efficiency</li>
+								</ul>
+							</div>
+
+							<div class="research-card">
+								<div class="card-header">
+									<h3 class="card-title">Energetic Materials Certification</h3>
+								</div>
+								<p class="card-description">
+									Development of experiment-driven certification methods for energetic materials manufactured using powder material extrusion techniques. This research addresses critical needs in advancing additive manufacturing capabilities for specialized materials.
+								</p>
+								<ul class="card-highlights">
+									<li>Develops standardized certification protocols</li>
+									<li>Advances powder material extrusion techniques</li>
+									<li>Enables new applications in energetic systems</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Long-Term Vision Tab -->
+					<div class="tab-content" id="longterm">
+						<div class="longterm-content">
+							<div class="thrust-card primary">
+								<div class="thrust-header">
+									<h3>Thrust 1: Smart Manufacturing of 3D Printed Polymers</h3>
+									<span class="thrust-badge">Process Optimization</span>
+								</div>
+								<p class="thrust-subtitle">Linking Process Parameters to Residual Stress Through Thermodynamic Modeling</p>
+								<p>While additive manufacturing empowers creation of complex 3D objects with design freedom, accurately predicting final assembly strength remains challenging due to material anisotropy. This research aims to bridge the gap by analyzing how printing parameters influence residual stress and its long-term impact on part behavior.</p>
+								<div class="research-approach">
+									<h4>Research Approach:</h4>
+									<ul>
+										<li>Leverage thermodynamic framework to model anisotropic viscoelastic response</li>
+										<li>Develop experimental protocols using X-ray diffraction (XRD) for internal stress analysis</li>
+										<li>Incorporate in-situ, non-destructive process monitoring via thermal imaging</li>
+										<li>Enable real-time feedback for adaptive control</li>
+									</ul>
+								</div>
+								<p><strong>Applications:</strong> Aerospace, transportation, low-cost prototyping</p>
+							</div>
+
+							<div class="thrust-card primary">
+								<div class="thrust-header">
+									<h3>Thrust 2: Fatigue Behavior and Life Cycle Assessment of Metal AM Parts</h3>
+									<span class="thrust-badge">Multiscale Analysis</span>
+								</div>
+								<p class="thrust-subtitle">A Multiscale Perspective</p>
+								<p>Metal additive manufacturing can produce complex components once unattainable through conventional methods. Understanding material response under cyclic loading requires multiscale analysis encompassing crack initiation, propagation, and final fracture stages.</p>
+								<div class="research-approach">
+									<h4>Research Approach:</h4>
+									<ul>
+										<li>Analyze effects of process parameters across multiple scales</li>
+										<li>Investigate pores and surrounding material behavior</li>
+										<li>Develop strategies for mitigating damage at each stage</li>
+										<li>Enable early-stage damage prevention</li>
+									</ul>
+								</div>
+								<p><strong>Applications:</strong> Aerospace, automotive industries</p>
+							</div>
+
+							<div class="thrust-card primary">
+								<div class="thrust-header">
+									<h3>Thrust 3: Instability-Driven Mixing of Viscoelastic Fluids</h3>
+									<span class="thrust-badge">Complex Domains</span>
+								</div>
+								<p class="thrust-subtitle">In Complex Domains</p>
+								<p>This research focuses on the intricate flow behavior of viscoelastic fluids in complex structures. Unlike Newtonian fluids, these materials exhibit unique elastic instabilities even at low flow rates, posing challenges for mixing applications.</p>
+								<div class="research-approach">
+									<h4>Research Approach:</h4>
+									<ul>
+										<li>Develop computational models for viscoelastic fluid flow through complex geometries</li>
+										<li>Study elastic turbulence onset and control mechanisms</li>
+										<li>Leverage static mixers for efficiency and compactness</li>
+										<li>Conduct rigorous experimental validation (3-5 year focus)</li>
+									</ul>
+								</div>
+								<p><strong>Applications:</strong> Pharmaceuticals, food processing, chemical, manufacturing industries</p>
+							</div>
+
+							<div class="secondary-projects">
+								<h3>Secondary Projects of Interest</h3>
+								<div class="secondary-grid">
+									<div class="secondary-card">
+										<h4>Green Production & Sustainable Manufacturing</h4>
+										<p>Investigating combining recycled and virgin polymers in additive manufacturing to promote sustainable production and minimize environmental impact while optimizing resource use.</p>
+									</div>
+									<div class="secondary-card">
+										<h4>Mathematical Drug Delivery Modeling</h4>
+										<p>Applying mathematical and computational techniques to simulate interactions between Newtonian fluids (pharmaceutical drugs) and non-Newtonian fluids (blood), including diffusion effects and instabilities.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="funding-section">
+								<h3>Potential Funding Sources</h3>
+								<p>Research aligns with priorities of multiple agencies and industry partners including Department of Science & Technology (DST), Department of Defense (DOD), Technology Development Board (TDB), National Centre for Additive Manufacturing (NCAM), Central Manufacturing Technology Institute (CMTI), and industry partners such as Simpliforge and TATA Motors.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Mentoring Tab -->
+					<div class="tab-content" id="mentoring">
+						<div class="mentoring-content">
+							<div class="mentoring-intro">
+								<p>Guided independence, structured training, and direct integration into meaningful research experiences form the core of my mentoring approach.</p>
+							</div>
+
+							<div class="mentoring-phases">
+								<div class="phase-card">
+									<div class="phase-number">1</div>
+									<h3>Onboarding & Foundation</h3>
+									<p>Understanding each student's background and offering targeted training through foundational readings, hands-on computational tools instruction, or supervised experimental work on projects such as residual stress modeling in polymers or multiscale fatigue analysis.</p>
+								</div>
+
+								<div class="phase-card">
+									<div class="phase-number">2</div>
+									<h3>Building Confidence</h3>
+									<p>As students become more confident, gradually transitioning them toward ownership by encouraging experiment design, model development, data interpretation, and presentation of findings during group meetings.</p>
+								</div>
+
+								<div class="phase-card">
+									<div class="phase-number">3</div>
+									<h3>Leadership Development</h3>
+									<p>Organizing research teams so graduate students mentor undergraduates, building leadership skills and facilitating collaborative progress across diverse research areas including additive manufacturing, fracture mechanics, and materials characterization.</p>
+								</div>
+
+								<div class="phase-card">
+									<div class="phase-number">4</div>
+									<h3>Supportive Culture</h3>
+									<p>Emphasizing open communication, professional skill-building, and a supportive environment that empowers students to grow intellectually and contribute meaningfully to the research program.</p>
+								</div>
+							</div>
+
+							<div class="mentoring-focus">
+								<h3>Key Focus Areas</h3>
+								<div class="focus-items">
+									<div class="focus-item">
+										<strong>Research Independence:</strong>
+										<p>Developing autonomous research capabilities through structured guidance and increasing responsibility.</p>
+									</div>
+									<div class="focus-item">
+										<strong>Technical Skills:</strong>
+										<p>Building proficiency in computational tools, experimental methods, and data analysis techniques.</p>
+									</div>
+									<div class="focus-item">
+										<strong>Communication:</strong>
+										<p>Cultivating ability to present findings, write technical reports, and collaborate across disciplines.</p>
+									</div>
+									<div class="focus-item">
+										<strong>Professional Development:</strong>
+										<p>Preparing students for careers in academia, industry, or research organizations.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	.research-section {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		color: var(--gray-200);
+		width: 100%;
+	}
+
+	/* Tabs Navigation */
+	.tabs-container {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.tabs-nav {
+		display: flex;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+		background: rgba(var(--gray-800), 0.6);
+		border-radius: 1.25rem;
+		padding: 0.75rem;
+		border: 2px solid rgba(var(--gray-700), 0.8);
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		backdrop-filter: blur(10px);
+	}
+
+	.tab-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.7rem;
+		padding: 1rem 1.6rem;
+		border: 2px solid transparent;
+		background: transparent;
+		color: var(--gray-400);
+		font-size: 1rem;
+		font-weight: 700;
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		position: relative;
+		border-radius: 0.875rem;
+		white-space: nowrap;
+		flex-shrink: 0;
+		letter-spacing: 0.3px;
+	}
+
+	.tab-btn:hover {
+		color: var(--gray-100);
+		background: rgba(var(--accent-color), 0.15);
+		border-color: rgba(var(--accent-color), 0.4);
+	}
+
+	.tab-btn.active {
+		color: var(--gray-0);
+		background: linear-gradient(135deg, var(--accent-light), var(--accent-regular));
+		border-color: var(--accent-light);
+		box-shadow: 0 6px 20px rgba(var(--accent-color), 0.4);
+		font-weight: 800;
+	}
+
+	.tab-label {
+		display: inline;
+	}
+
+	@media (max-width: 640px) {
+		.tabs-nav {
+			gap: 0.5rem;
+			padding: 0.8rem;
+			border-radius: 0.8rem;
+		}
+
+		.tab-btn {
+			padding: 0.9rem 1.2rem;
+			font-size: 0.9rem;
+			font-weight: 700;
+		}
+	}
+
+	@media (min-width: 641px) and (max-width: 1023px) {
+		.tab-btn {
+			padding: 1rem 1.6rem;
+			font-size: 1rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.tabs-nav {
+			gap: 1rem;
+			padding: 1.2rem;
+		}
+
+		.tab-btn {
+			padding: 1.2rem 2rem;
+			font-size: 1.1rem;
+		}
+	}
+
+	/* Tab Content */
+	.tab-content {
+		display: none;
+		opacity: 0;
+		animation: slideInFade 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+	}
+
+	.tab-content.active {
+		display: block;
+		opacity: 1;
+	}
+
+	@keyframes slideInFade {
+		from {
+			opacity: 0;
+			transform: translateY(8px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	/* Overview Tab Styles */
+	.research-content {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.intro-block {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.intro-block > p {
+		font-size: var(--text-lg);
+		line-height: 1.6;
+		color: var(--gray-100);
+	}
+
+	.research-pillars {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	@media (min-width: 640px) {
+		.research-pillars {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	.pillar-card {
+		padding: 1.5rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		background: var(--gradient-subtle);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.pillar-card:hover {
+		border-color: var(--gray-700);
+		box-shadow: var(--shadow-md);
+		transform: translateY(-2px);
+	}
+
+	.pillar-card h3 {
+		font-size: var(--text-lg);
+		font-weight: 700;
+		color: var(--accent-regular);
+		margin: 0 0 0.75rem 0;
+	}
+
+	.pillar-card p {
+		margin: 0;
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+		line-height: 1.5;
+	}
+
+	.research-areas {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.research-areas h2 {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+		margin: 0;
+	}
+
+	.areas-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	@media (min-width: 640px) {
+		.areas-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	.area-card {
+		padding: 1.5rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1.25rem;
+		background: var(--gradient-subtle);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.area-card:hover {
+		border-color: var(--gray-700);
+		box-shadow: var(--shadow-md);
+		transform: translateY(-2px);
+	}
+
+	.area-card h3 {
+		font-size: var(--text-lg);
+		font-weight: 700;
+		color: var(--accent-regular);
+		margin: 0 0 1rem 0;
+	}
+
+	.area-card p {
+		margin: 0;
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+		line-height: 1.6;
+	}
+
+	/* Ongoing Research Cards */
+	.research-cards-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+		width: 100%;
+	}
+
+	@media (min-width: 640px) {
+		.research-cards-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.research-cards-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.research-card {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		overflow: hidden;
+		position: relative;
+		gap: 1rem;
+	}
+
+	.research-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 0;
+		background: linear-gradient(90deg, var(--accent-regular), rgba(var(--accent-color), 0.3), transparent);
+		transition: height 0.3s ease;
+	}
+
+	.research-card:hover {
+		border-color: var(--gray-700);
+		box-shadow: var(--shadow-md);
+		background: var(--gradient-subtle-2);
+		transform: translateY(-2px);
+	}
+
+	.research-card:hover::before {
+		height: 3px;
+	}
+
+	.card-header {
+		position: relative;
+		z-index: 1;
+	}
+
+	.card-title {
+		font-size: var(--text-lg);
+		font-weight: 700;
+		color: var(--accent-regular);
+		margin: 0 0 0.5rem 0;
+		line-height: 1.4;
+	}
+
+	.card-description {
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+		margin: 0;
+		line-height: 1.6;
+		position: relative;
+		z-index: 1;
+	}
+
+	.card-highlights {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		position: relative;
+		z-index: 1;
+	}
+
+	.card-highlights li {
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+		padding-left: 1.5rem;
+		position: relative;
+	}
+
+	.card-highlights li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		color: var(--accent-regular);
+		font-weight: 700;
+	}
+
+	/* Long-Term Vision Styles */
+	.longterm-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	.thrust-card {
+		padding: 2rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		overflow: hidden;
+		position: relative;
+	}
+
+	.thrust-card.primary {
+		border-left: 4px solid var(--accent-regular);
+	}
+
+	.thrust-card:hover {
+		border-color: var(--gray-700);
+		box-shadow: var(--shadow-md);
+		transform: translateX(4px);
+	}
+
+	.thrust-header {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		margin-bottom: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.thrust-header h3 {
+		margin: 0;
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		font-weight: 700;
+	}
+
+	.thrust-badge {
+		background: rgba(var(--accent-color), 0.2);
+		color: var(--accent-regular);
+		padding: 0.4rem 0.8rem;
+		border-radius: 0.5rem;
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		white-space: nowrap;
+		border: 1px solid rgba(var(--accent-color), 0.3);
+	}
+
+	.thrust-subtitle {
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+		font-style: italic;
+		margin: 0 0 1rem 0;
+	}
+
+	.thrust-card p {
+		color: var(--gray-300);
+		line-height: 1.6;
+		margin: 0 0 1rem 0;
+		font-size: var(--text-sm);
+	}
+
+	.research-approach {
+		background: rgba(var(--accent-color), 0.05);
+		padding: 1.25rem;
+		border-radius: 0.875rem;
+		border-left: 3px solid var(--accent-regular);
+		margin: 1rem 0;
+	}
+
+	.research-approach h4 {
+		margin: 0 0 0.75rem 0;
+		color: var(--gray-0);
+		font-size: var(--text-sm);
+		font-weight: 700;
+	}
+
+	.research-approach ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.research-approach li {
+		color: var(--gray-400);
+		font-size: var(--text-sm);
+		line-height: 1.5;
+		padding-left: 1.5rem;
+		position: relative;
+	}
+
+	.research-approach li::before {
+		content: '→';
+		position: absolute;
+		left: 0;
+		color: var(--accent-regular);
+		font-weight: 700;
+	}
+
+	.secondary-projects {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.secondary-projects h3 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin: 0;
+	}
+
+	.secondary-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	@media (min-width: 640px) {
+		.secondary-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.secondary-card {
+		padding: 1.5rem;
+		border: 1px solid rgba(255, 193, 7, 0.3);
+		border-radius: 1rem;
+		background: linear-gradient(135deg, rgba(255, 193, 7, 0.05) 0%, rgba(255, 193, 7, 0.01) 100%);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.secondary-card:hover {
+		border-color: rgba(255, 193, 7, 0.5);
+		background: linear-gradient(135deg, rgba(255, 193, 7, 0.08) 0%, rgba(255, 193, 7, 0.02) 100%);
+	}
+
+	.secondary-card h4 {
+		font-size: var(--text-sm);
+		font-weight: 700;
+		color: rgba(255, 193, 7, 0.9);
+		margin: 0 0 0.75rem 0;
+	}
+
+	.secondary-card p {
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+		margin: 0;
+		line-height: 1.5;
+	}
+
+	.funding-section {
+		padding: 1.5rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		background: var(--gradient-subtle);
+	}
+
+	.funding-section h3 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin: 0 0 1rem 0;
+	}
+
+	.funding-section p {
+		margin: 0;
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+		line-height: 1.6;
+	}
+
+	/* Mentoring Styles */
+	.mentoring-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	.mentoring-intro {
+		padding: 1.5rem;
+		border-left: 4px solid var(--accent-regular);
+		background: rgba(var(--accent-color), 0.05);
+		border-radius: 0.875rem;
+	}
+
+	.mentoring-intro p {
+		margin: 0;
+		font-size: var(--text-lg);
+		color: var(--gray-100);
+		font-weight: 500;
+		line-height: 1.6;
+	}
+
+	.mentoring-phases {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	@media (min-width: 640px) {
+		.mentoring-phases {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.phase-card {
+		padding: 1.5rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1.25rem;
+		background: var(--gradient-subtle);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.phase-card:hover {
+		border-color: var(--gray-700);
+		box-shadow: var(--shadow-md);
+		transform: translateY(-2px);
+	}
+
+	.phase-number {
+		position: absolute;
+		top: -20px;
+		right: -20px;
+		width: 100px;
+		height: 100px;
+		background: rgba(var(--accent-color), 0.1);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 3rem;
+		font-weight: 700;
+		color: rgba(var(--accent-color), 0.3);
+	}
+
+	.phase-card h3 {
+		margin: 0;
+		font-size: var(--text-lg);
+		font-weight: 700;
+		color: var(--accent-regular);
+		position: relative;
+		z-index: 1;
+	}
+
+	.phase-card p {
+		margin: 0;
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+		line-height: 1.6;
+		position: relative;
+		z-index: 1;
+	}
+
+	.mentoring-focus {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.mentoring-focus h3 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin: 0;
+	}
+
+	.focus-items {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	@media (min-width: 640px) {
+		.focus-items {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.focus-item {
+		padding: 1.25rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		background: var(--gradient-subtle);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.focus-item:hover {
+		border-color: var(--gray-700);
+		box-shadow: var(--shadow-md);
+	}
+
+	.focus-item strong {
+		color: var(--accent-regular);
+		font-size: var(--text-sm);
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.focus-item p {
+		margin: 0;
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+		line-height: 1.5;
+	}
+</style>
+
+<script>
+	function initTabs() {
+		const tabBtns = document.querySelectorAll('.tab-btn');
+		const tabContents = document.querySelectorAll('.tab-content');
+
+		tabBtns.forEach((btn) => {
+			btn.addEventListener('click', () => {
+				// Remove active class from all buttons and contents
+				tabBtns.forEach((b) => b.classList.remove('active'));
+				tabContents.forEach((content) => content.classList.remove('active'));
+
+				// Add active class to clicked button
+				btn.classList.add('active');
+
+				// Show corresponding tab content
+				const tabId = btn.getAttribute('data-tab');
+				const tabContent = document.getElementById(tabId);
+				if (tabContent) {
+					tabContent.classList.add('active');
+				}
+			});
+
+			// Keyboard navigation
+			btn.addEventListener('keydown', (e) => {
+				let targetBtn = null;
+				if (e.key === 'ArrowLeft') {
+					targetBtn = btn.previousElementSibling || tabBtns[tabBtns.length - 1];
+				} else if (e.key === 'ArrowRight') {
+					targetBtn = btn.nextElementSibling || tabBtns[0];
+				}
+				
+				if (targetBtn && targetBtn.classList.contains('tab-btn')) {
+					e.preventDefault();
+					targetBtn.click();
+					targetBtn.focus();
+				}
+			});
+		});
+
+		// Set first tab as active on load
+		if (tabBtns.length > 0) {
+			const firstBtn = tabBtns[0];
+			if (!firstBtn.classList.contains('active')) {
+				firstBtn.click();
+			}
+		}
+	}
+
+	// Initialize tabs when DOM is ready
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initTabs);
+	} else {
+		initTabs();
+	}
+</script>
