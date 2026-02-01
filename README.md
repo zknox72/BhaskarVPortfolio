@@ -1,16 +1,6 @@
-# Astro Starter Kit: Portfolio
+# Bhaskar V Portfolio
 
-```sh
-npm create astro@latest -- --template portfolio
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/portfolio/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![portfolio](https://user-images.githubusercontent.com/357379/210779178-a98f0fb7-6b1a-4068-894c-8e1403e26654.jpg)
+A simple and elegant portfolio website built with Astro and deployed to GitHub Pages.
 
 ## 🧞 Commands
 
@@ -25,6 +15,42 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🚀 GitHub Pages Deployment
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This portfolio is configured to deploy to GitHub Pages automatically. Follow these steps:
+
+### 1. Update Configuration
+Edit `astro.config.mjs` and replace `<username>` with your GitHub username:
+
+```javascript
+site: 'https://<username>.github.io',
+base: '/BhaskarVPortfolio',
+```
+
+### 2. Push to GitHub
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+### 3. GitHub Actions
+The workflow in `.github/workflows/deploy.yml` will:
+- Build the site automatically on every push to `main`
+- Deploy the built files to GitHub Pages
+- Make your site available at `https://<username>.github.io/BhaskarVPortfolio`
+
+### 4. Enable GitHub Pages (if not already enabled)
+Go to your repository settings → Pages → Source: Deploy from branch → Branch: `gh-pages` (created by the workflow)
+
+## 📝 Customize Your Portfolio
+
+Edit the content in `src/` to customize:
+- **Homepage**: `src/pages/index.astro`
+- **About Page**: `src/pages/about.astro`
+- **Work/Projects**: `src/pages/work.astro` and `src/content/work/`
+
+## 📚 Learn More
+
+- [Astro Documentation](https://docs.astro.build)
+- [Astro Discord Community](https://astro.build/chat)
