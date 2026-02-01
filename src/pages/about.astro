@@ -2,6 +2,7 @@
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getImagePath } from '../utils/imageHelper';
 ---
 
 <BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
@@ -14,7 +15,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<img
 					width="1553"
 					height="873"
-					src="/assets/at-work.jpg"
+					src={getImagePath('/assets/at-work.jpg')}
 					alt="Jeanine White at work with a colleague"
 				/>
 			</Hero>

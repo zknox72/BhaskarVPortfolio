@@ -4,6 +4,6 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  site: 'https://<username>.github.io',
+  site: 'https://zknox72.github.io',
   base: '/BhaskarVPortfolio',
 });

@@ -10,6 +10,7 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Skills from '../components/Skills.astro';
+import { getImagePath } from '../utils/imageHelper';
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -42,13 +43,7 @@ const projects = (await getCollection('work'))
 					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
 					width="480"
 					height="620"
-					src="/assets/portrait.jpg"
-				/>
-			</header>
-
-			<Skills />
-		</div>
-
+				src={getImagePath('/assets/portrait.jpg')}
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
