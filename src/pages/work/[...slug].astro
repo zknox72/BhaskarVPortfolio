@@ -6,7 +6,7 @@ import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getImagePath } from '../../utils/imageHelper';
+import { getImagePath, getLinkPath } from '../../utils/imageHelper';
 
 interface Props {
 	entry: CollectionEntry<'work'>;
@@ -32,7 +32,7 @@ const { Content } = await render(entry);
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
+					<a class="back-link" href={getLinkPath('/work/')}><Icon icon="arrow-left" /> Work</a>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">

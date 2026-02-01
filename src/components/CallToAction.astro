@@ -1,4 +1,6 @@
 ---
+import { getLinkPath } from '../utils/imageHelper';
+
 interface Props {
 	href: string;
 }
@@ -6,7 +8,7 @@ interface Props {
 const { href } = Astro.props;
 ---
 
-<a href={href}><slot /></a>
+<a href={getLinkPath(href)}><slot /></a>
 
 <style>
 	a {

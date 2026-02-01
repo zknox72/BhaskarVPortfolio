@@ -2,6 +2,7 @@
 import Icon from './Icon.astro';
 import type { iconPaths } from './IconPaths';
 import ThemeToggle from './ThemeToggle.astro';
+import { getLinkPath } from '../utils/imageHelper';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -31,7 +32,7 @@ const isCurrentPage = (href: string) => {
 
 <nav>
 	<div class="menu-header">
-		<a href="/" class="site-title">
+		<a href={getLinkPath('/')} class="site-title">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
 			Jeanine White
 		</a>
@@ -49,7 +50,7 @@ const isCurrentPage = (href: string) => {
 			{
 				textLinks.map(({ label, href }) => (
 					<li>
-						<a aria-current={isCurrentPage(href) ? 'page' : null} class="link" href={href}>
+						<a aria-current={isCurrentPage(href) ? 'page' : null} class="link" href={getLinkPath(href)}>
 							{label}
 						</a>
 					</li>
@@ -76,7 +77,7 @@ const isCurrentPage = (href: string) => {
 			{
 				textLinks.map(({ label, href }) => (
 					<li>
-						<a aria-current={isCurrentPage(href) ? 'page' : null} class="link" href={href}>
+						<a aria-current={isCurrentPage(href) ? 'page' : null} class="link" href={getLinkPath(href)}>
 							{label}
 						</a>
 					</li>
